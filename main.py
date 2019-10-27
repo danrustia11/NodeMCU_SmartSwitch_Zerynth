@@ -23,11 +23,11 @@ except Exception as e:
 
 
 # Variable constants
-SSID = "Turbulence"
-PASSWORD = "qwertyuiop"
+SSID = ""
+PASSWORD = ""
 RELAY_PIN = D5
-UID = "BiZcDz1DRKqwbQ63WKnDCw" #  Get this from "Connected Devices"
-TOKEN = "yDYfLuntSgeBYIR7xHt9Wg" #  Get this from "Connected Devices"
+UID = "" #  Get this from "Connected Devices"
+TOKEN = "" #  Get this from "Connected Devices"
 
 
 
@@ -37,16 +37,16 @@ def connectWifi(SSID, PASSWORD):
     print("Connecting to Wi-Fi router...")
     
     for i in range(0,5):
-    try:
-        wifi.link(SSID,wifi.WIFI_WPA2,PASSWORD)
-        break
-    except Exception as e:
-        print("Error: ", e)
-    else:
-        print("Cannot connect.")
-        while True:
-            sleep(1000)
-            
+        try:
+            wifi.link(SSID,wifi.WIFI_WPA2,PASSWORD)
+            break
+        except Exception as e:
+            print("Error: ", e)
+        else:
+            print("Cannot connect.")
+            while True:
+                sleep(1000)
+                
 
 
 def on_switch():
